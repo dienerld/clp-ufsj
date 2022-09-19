@@ -17,6 +17,10 @@ export class Product {
     return this.#price;
   }
 
+  get name (): string {
+    return this.#name;
+  }
+
   toString () {
     return `${this.#code} - ${this.#name} - ${this.#price}`;
   }

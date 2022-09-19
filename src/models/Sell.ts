@@ -21,7 +21,7 @@ export class ItemSell implements ITotalizable {
   }
 
   toString () {
-    return this.#product.toString();
+    return `Nome: ${this.#product.name} - Preço: ${this.#price} - Quantidade: ${this.#quantity} - Total: ${this.total()}`;
   }
 }
 
@@ -64,7 +64,7 @@ export class Sell implements ITotalizable {
     Data: ${this.#date.toLocaleDateString()}
     Cliente: ${this.#client.name}
     Total: ${this.total()}
-    Items: ${this.#items.map(item => item.toString())}
+    Items: ${this.#items.map(item => `\n${item.toString()}`)}
     `;
   }
 }
